@@ -1,0 +1,211 @@
+* {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--text-color);
+}
+
+:root {
+  --mint: #2e2859;
+  --body: #ffffff;
+  --text-color: #2e2859;
+  --button-color: #4E8E42;
+  --button-hover-color: #70B042;
+
+  --bs-link-color: var(--button-color);
+  --bs-link-hover-color: var(--button-hover-color);
+  --bg: url("../media/bg.jpg");
+}
+
+.text-border {
+  text-shadow: 
+    -1px -1px 0px var(--border-color),
+    0px -1px 0px var(--border-color),
+    1px -1px 0px var(--border-color),
+    -1px  0px 0px var(--border-color),
+    1px  0px 0px var(--border-color),
+    -1px  1px 0px var(--border-color),
+    0px  1px 0px var(--border-color),
+    1px  1px 0px var(--border-color),
+    -2px -2px 0px var(--border-color),
+    -1px -2px 0px var(--border-color),
+    0px -2px 0px var(--border-color),
+    1px -2px 0px var(--border-color),
+    2px -2px 0px var(--border-color),
+    2px -1px 0px var(--border-color),
+    2px  0px 0px var(--border-color),
+    2px  1px 0px var(--border-color),
+    2px  2px 0px var(--border-color),
+    1px  2px 0px var(--border-color),
+    0px  2px 0px var(--border-color),
+    -1px  2px 0px var(--border-color),
+    -2px  2px 0px var(--border-color),
+    -2px  1px 0px var(--border-color),
+    -2px  0px 0px var(--border-color),
+    -2px -1px 0px var(--border-color);
+}
+
+.color-mint > a {
+  color: var(--button-color);
+  transition: color 0.5s;
+}
+
+.color-mint  > a:hover {
+  color: var(--button-hover-color);
+}
+
+.color-mint  > a:active {
+  color: var(--button-color);
+}
+
+.text-border-mint {
+  --border-color: var(--mint);
+}
+
+.text-border-dark {
+  --border-color: var(--text-color);
+}
+
+
+/* Hide scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--body);
+  -ns-overflow-width: none;
+  scrollbar-width: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav.navbar {
+  width: 100%;
+  height: 2.5cm;
+  z-index: 1;
+  position: fixed;
+  box-shadow: 0px 0.25px 8px;
+  backdrop-filter: blur(5px);
+}
+
+div.dropdown-menu {
+  background-color: var(--mint);
+}
+
+.splash-div {
+  padding: calc(15vh + 2.5cm + 5vw) 5vw calc(15vh + 5vw) 5vw;
+  background-image: var(--bg);
+  background-size: cover;
+}
+
+.splash-div h1 {
+  color: white;
+  font-size: clamp(1.25rem, 10vw, 5rem);
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0px;
+}
+
+.btn-primary {
+  --bs-btn-active-bg: var(--button-color);
+}
+
+.btn {
+  border: none;
+  color: var(--mint);
+  background-color: var(--button-color);
+  transition: background-color 0.5s;
+}
+
+.btn:hover {
+  background-color: var(--button-hover-color);
+  color: var(--mint);
+}
+
+.btn:active {
+  background-color: var(--button-color);
+  color: var(--mint);
+}
+
+.btn span {
+  color: var(--mint);
+}
+
+.card-title {
+  font-weight: bold;
+  margin: 0px;
+}
+
+.card {
+  max-width: calc(100% - 10px);
+  width: 18rem;
+  text-align: center;
+}
+
+.card-body {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-item {
+  border-radius: 10px;
+  transition: background-color 0.5s;
+}
+
+.nav-item:hover {
+  background-color: rgba(46, 40, 89, 0.125);
+}
+
+a.nav-link {
+  font-weight: 600;
+  color: white !important;
+}
+/* Style for container */
+main {
+  min-height: calc(100vh - 11cm);
+  font-size: 1.25rem;
+}
+
+/* Style for footer */
+footer {
+  bottom: 0;
+  width: 100%;
+  min-height: 5cm;
+  background: var(--mint);
+  background-size: cover;
+  box-shadow: 2px 1px 10px;
+  padding: 0.5cm;
+}
+
+footer p, footer li, footer h6 {
+  color: white;
+}
+
+div.tab-pane {
+  flex-direction: row; /* Stack items vertically */
+  margin: 0.5cm;
+}
+
+@media screen and (max-width: 575px) {
+  .container.dropdown {
+    backdrop-filter: blur(5px);
+  }
+
+  button.navbar-toggler,
+  span {
+    border: none;
+  }
+
+  div.dropdown {
+    backdrop-filter: blur(5px);
+  }
+}

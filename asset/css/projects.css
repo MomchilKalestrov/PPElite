@@ -1,0 +1,13 @@
+.card-title + .card-text {
+  margin-top: var(--bs-card-spacer-x);
+}
+
+.card .btn {
+  width: calc(100% - var(--bs-card-spacer-x) * 2);
+  margin: var(--bs-card-spacer-x);
+  margin-top: 0;
+}
+
+.card-img-top {
+  width: 100%;
+}

@@ -1,0 +1,41 @@
+.form-carousel {
+  --width: 30rem;
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: min(100%, var(--width));
+  margin-left: calc((100% - min(100%, var(--width))) / 2);
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.form-carousel .card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  background: #eee;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+}
+
+form > .card > .card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-title + .card-text {
+  margin-top: var(--bs-card-spacer-x);
+}
+
+.card .btn {
+  width: 100%;
+}
+
+form > .card > .card-body > .btn {
+  font-size: clamp(0.75rem, 10vw, 2rem);
+}
